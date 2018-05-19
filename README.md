@@ -1,12 +1,12 @@
-# [Material Controls for HTML5 Video]
+# Material Controls for HTML5 Video
 ### Synopsis
 
-JavaScript programatically wraps all HTML5 native `video` elements with custom Google Material Design controls. 
+JavaScript programatically wraps all native HTML5 `video` elements with custom Google Material Design controls. 
 Small CSS file accompanies the script. 
 
 CREDITS: 
  - This project took direction from Mozilla Developer Network, MDN's, article [Creating a cross-browser video player](//developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
- - Google's Material Components Web, MDC-Web
+ - Google's [Material Components Web](https://github.com/material-components/material-components-web), MDC-Web Library
 
 ### Code Example
 
@@ -14,14 +14,14 @@ CREDITS:
 
 ### Motivation
 
-My need for a lightweight, easy to use, simple, and intuitive datetime tools library in a single JavaScript file.
+Automate Material Design custom controls for HTML5 video elements.
 
 ### Installation
 
-Add the `htt-mvp` class to any video element that you want the script to customize with Material Design controls. 
-Include the CSS and JavaScript. NOTE, you need to also include Google's Material Components Web, MDC-We, CSS and JavaScript as well as Google's Roboto font. 
+ - Add the `htt-mvp` class to any video element that you want the script to customize with Material Design controls. 
+ - Include the CSS and JavaScript. NOTE, you need to also include Google's Material Components Web, MDC-We, CSS and JavaScript as well as Google's Roboto font. 
 
-:checkered_flag: A May 2018 snapshot of Google's Material Components Web, MDC-Web, is included as MDC-Web remains in alpha and breaking changes occur. 
+:pushpin: A May 2018 snapshot of Google's Material Components Web, MDC-Web, is included in this repository as MDC-Web remains in alpha and breaking changes occur. 
 Use the latest MDC-Web package and if you experience issues, simply roll back and include the MDC-Web snapshot from May 2018 included in this repository. 
 
 Styling of the video size and layout is left up to you as this package only modifies video controls. 
