@@ -6,7 +6,6 @@
 (function() {
     var doc = document;
     var bufferLengthDetector;
-    var durationDetector;
     var linearProgressObjects = [];
     var multimediaElements;
     var parent;
@@ -96,6 +95,11 @@
     multimediaElements = doc.querySelectorAll(".htt-mvp");
     
     for (var i = 0; i < multimediaElements.length; i++) {
+        var tn = multimediaElements[i].tagName.toLowerCase();
+        if(tn !== "video"){
+            console.log("ERROR: htt-mvp class only allowed on video elements!");
+            return;
+        }
         multimediaElements[i].controls = false;
         
         parent = multimediaElements[i].parentNode;
@@ -628,4 +632,4 @@
             }
         }
     }
-        }());
+}());
