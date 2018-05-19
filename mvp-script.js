@@ -285,12 +285,12 @@
         elTimerContainer = doc.createElement("div");
         elTimerContainer.classList.add("htt-mvp-media-timer-container");
         elP = doc.createElement("p");
-        elP.classList.add("htt-mvp-media-timer-container");
+        elP.classList.add("mdc-typography--body2");
         elCurrent = doc.createElement("span");
-        elCurrent.classList.add("current-time");
+        elCurrent.classList.add("current-time","special-font");
         elCurrent.appendChild(doc.createTextNode("00:00"));
         elTotal = doc.createElement("span");
-        elTotal.classList.add("total-time");
+        elTotal.classList.add("total-time","special-font");
         elTotal.appendChild(doc.createTextNode("00:00"));
         elP.appendChild(elCurrent);
         elP.appendChild(doc.createTextNode(" / "));
@@ -437,9 +437,6 @@
                 multimediaElements[i].addEventListener("ended", multimediaEndedHandler);
             }
             for (var i = 0; i < multimediaElements.length; i++) {
-                multimediaElements[i].addEventListener("loadedmetadata", multimediaMetaLoadedHandler);
-            }
-            for (var i = 0; i < multimediaElements.length; i++) {
                 multimediaElements[i].addEventListener("timeupdate", multimediaTimeupdateHandler);
             }
             for (var i = 0; i < multimediaElements.length; i++) {
@@ -484,14 +481,6 @@
             
         }
     }
-    function readDuration(media){
-        var mediaContainer = container(media);
-        if (media.duration > 0) {
-            mediaContainer.querySelector(".total-time").innerHTML = hhmmss(media.duration);
-            clearInterval(durationDetector);
-        }
-    }
-    
     function hhmmss(totalSeconds) {
         totalSeconds = Math.floor(totalSeconds);
         var hours = Math.floor(totalSeconds / 3600);
@@ -591,11 +580,6 @@
         container(media).querySelector(".custom-stop-button").classList.add("htt-mvp-hidden");
         container(media).querySelector(".custom-playpause-button").classList.remove("htt-mvp-hidden");
     }
-    function multimediaMetaLoadedHandler(e){
-        var media = e.target;
-        durationDetector = setInterval(readDuration, 500, media);
-    }
-    
     function multimediaTimeupdateHandler(e){
         var mediaContainer = container(e.target);
         var media = e.target;
@@ -612,7 +596,7 @@
         var media = e.target;
         var duration = media.duration;
         if (duration > 0) {
-            bufferLengthDetector = setInterval(readBuffer, 500, media);
+            bufferLengthDetector = setInterval(readBuffer, 1000, media);
         }
     }
     function downloadClickHandler(e){

@@ -2,6 +2,7 @@
 ### Synopsis
 
 JavaScript programatically wraps all native HTML5 `video` elements with custom Google Material Design controls. 
+Wrap means that Material Design Scalable Vector Graphics, SVG, icons and Google's Material Components Web, MDC-Web, library are programatically created and attached in the browser. 
 Small CSS file accompanies the script. All CSS classes are prepended with `htt-mvp` so as to avoid collisions. 
 The JavaScript is encapsulated in an immediately-invoked function expression, IIFE. 
 
@@ -24,7 +25,7 @@ Automate Material Design custom controls for HTML5 video elements.
  - Add the `htt-mvp` class to any video element that you want the script to customize with Material Design controls. 
  - Include the CSS and JavaScript. NOTE, you need to also include Google's Material Components Web, MDC-We, CSS and JavaScript as well as Google's Roboto font. 
 
-:pushpin: A May 2018 snapshot of Google's Material Components Web, MDC-Web, is included in this repository as MDC-Web remains in alpha and breaking changes occur. 
+:pushpin: A May 2018 snapshot of Google's MDC-Web, is included in this repository as MDC-Web remains in alpha and breaking changes occur. 
 Use the latest MDC-Web package and if you experience issues, simply roll back and include the MDC-Web snapshot from May 2018 included in this repository. 
 
 Styling of the video size and layout is left up to you as this package only modifies video controls. 
