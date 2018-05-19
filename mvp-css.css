@@ -1,0 +1,137 @@
+/*!
+ Material Controls for HTML5 Video
+ Copyright (c) 2018 High Tech Telecom, LLC
+ https://hightechtele.com
+ License: MIT
+*/
+
+.htt-mvp-custom-media-controls-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+    
+.htt-mvp-playpause{
+    flex: 0 1 auto;
+    align-self: auto;
+}
+.htt-mvp-media-progress-bar {
+    flex: 0 1 auto;
+    align-self: auto;
+    --mdc-theme-primary: #d50000;
+}
+.htt-mvp-stop{
+    flex: 0 1 auto;
+    align-self: auto;
+}
+.htt-mvp-media-timer-container {
+    flex: 0 1 auto;
+    align-self: auto;
+    z-index: 10;
+}
+.htt-mvp-media-timer-container > p {
+    margin: 0px 8px 0px 8px;
+}
+.htt-mvp-media-container {
+    flex: 0 1 auto;
+    align-self: auto;
+    position: relative;
+}
+
+.htt-mvp-media-progress-bar:hover{
+    cursor: pointer;
+    background:rgb(189, 189, 189);
+    background:rgba(189, 189, 189, .3);
+}
+
+.htt-mvp-media-container .play-icon{
+    cursor: pointer;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+svg:hover.htt-mvp-play-svg{
+    fill: #ffffff;
+}
+
+.htt-mvp-custom-media-controls {
+    margin-top: -56px;
+    -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+    transition:visibility 0s linear 0.3s,opacity 0.3s linear;           
+}
+.htt-mvp-custom-media-controls button {
+    height: 48px;
+    width: 48px;            
+}
+.htt-mvp-custom-media-controls-container > div:nth-of-type(1){
+    flex: 1 1 auto;
+    align-self: auto;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;            
+}
+.htt-mvp-custom-media-controls-container > div:nth-of-type(2){
+    flex: 0 1 auto;
+    align-self: auto;    
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;           
+}
+.htt-mvp-vol-slider-container{
+    width: 100%;
+    max-width: 100px;            
+}
+.htt-mvp-hidden {
+    display:none !important;
+}
+
+.htt-mvp-mdc-slider {
+    width: 100%;
+}
+.htt-mvp-mdc-slider__track-container{
+    background-color: white !important;
+}
+
+.htt-mvp-show {
+    visibility: visible;
+    opacity: 1;
+}
+.htt-mvp-visible {
+    visibility: visible;
+    opacity:1; 
+}
+.htt-mvp-invisible {
+    visibility:hidden;
+    opacity:0;
+}
+.htt-mvp-volume-controls {
+    flex: 1 1 auto;
+    align-self: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+.htt-mvp-mdc-button{
+    --mdc-theme-primary: #ffffff;
+    --mdc-theme-secondary: #424242;
+}
+.htt-mvp-mdc-slider{
+    --mdc-theme-primary: #ffffff;
+    --mdc-theme-secondary: #ffffff;
+}
+.htt-mvp-mdc-linear-progress {
+    --mdc-theme-primary: #d50000;
+}
