@@ -10,6 +10,8 @@ CREDITS:
 
 ### Code Example
 
+Live example at [//hightechtele.com/articles/material-controls-for-html-video](//hightechtele.com/articles/material-controls-for-html-video).
+
 <img src="https://github.com/rhroyston/rhroyston.github.io/blob/master/gm.jpg" alt="screenshot">
 
 ### Motivation
