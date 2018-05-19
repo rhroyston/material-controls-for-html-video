@@ -2,7 +2,8 @@
 ### Synopsis
 
 JavaScript programatically wraps all native HTML5 `video` elements with custom Google Material Design controls. 
-Small CSS file accompanies the script. 
+Small CSS file accompanies the script. All CSS classes are prepended with `htt-mvp` so as to avoid collisions. 
+The JavaScript is encapsulated in an immediately-invoked function expression, IIFE. 
 
 CREDITS: 
  - This project took direction from Mozilla Developer Network, MDN's, article [Creating a cross-browser video player](//developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
