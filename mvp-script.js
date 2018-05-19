@@ -142,10 +142,10 @@
         elLeftControls = doc.createElement("div");
                  
         elPlayPauseButton = doc.createElement("button");
-        elPlayPauseButton.classList.add("mdc-button", "custom-playpause-button","htt-mvp-mdc-button");
+        elPlayPauseButton.classList.add("mdc-button", "htt-mvp-custom-playpause-button","htt-mvp-mdc-button");
         
         elPlayButton = doc.createElementNS("http://www.w3.org/2000/svg", "svg");
-        elPlayButton.classList.add("custom-play");
+        elPlayButton.classList.add("htt-mvp-custom-play");
         elPlayButton.setAttribute("width","24");
         elPlayButton.setAttribute("height","24");
         elPlayButton.setAttribute("viewBox","0 0 24 24");
@@ -162,7 +162,7 @@
         elPlayButton.appendChild(elPlayButtonPath2);
         
         elPauseButton = doc.createElementNS("http://www.w3.org/2000/svg", "svg");
-        elPauseButton.classList.add("custom-pause","htt-mvp-hidden");
+        elPauseButton.classList.add("htt-mvp-custom-pause","htt-mvp-hidden");
         elPauseButton.setAttribute("width","24");
         elPauseButton.setAttribute("height","24");
         elPauseButton.setAttribute("viewBox","0 0 24 24");
@@ -182,7 +182,7 @@
         elPlayPauseButton.appendChild(elPauseButton);
         
         elStopButton = doc.createElement("button");
-        elStopButton.classList.add("mdc-button","custom-stop-button","htt-mvp-mdc-button");
+        elStopButton.classList.add("mdc-button","htt-mvp-custom-stop","htt-mvp-mdc-button");
         
         stopButtonSvg = doc.createElementNS("http://www.w3.org/2000/svg", "svg");
         stopButtonSvg.setAttribute("width","24");
@@ -381,11 +381,11 @@
     var mediaFullscreenButtons = doc.querySelectorAll(".media-fullscreen-button");
     var mdc = window.mdc;
     var muteButtons = doc.querySelectorAll(".custom-mute-button");
-    var playpauseButtons = doc.querySelectorAll(".custom-playpause-button");
+    var playpauseButtons = doc.querySelectorAll(".htt-mvp-custom-playpause-button");
     var playIcons = doc.querySelectorAll(".play-icon");
     var mediaProgressBars = doc.querySelectorAll(".htt-mvp-media-progress-bar");
     var sliderElements = doc.querySelectorAll(".vol-slider");
-    var stopButtons = doc.querySelectorAll(".custom-stop-button");
+    var stopButtons = doc.querySelectorAll(".htt-mvp-custom-stop");
     var supportsVideo = !!doc.createElement("video").canPlayType;
     var mediaContainers = doc.querySelectorAll(".htt-mvp-media-container");
     var customMediaControls = doc.querySelectorAll(".htt-mvp-custom-media-controls");
@@ -504,8 +504,8 @@
         var mediaContainer = container(e.target);
         var media = mediaContainer.querySelector(".htt-mvp");
         media.play();
-        mediaContainer.querySelector(".custom-play").classList.add("htt-mvp-hidden");
-        mediaContainer.querySelector(".custom-pause").classList.remove("htt-mvp-hidden");                
+        mediaContainer.querySelector(".htt-mvp-custom-play").classList.add("htt-mvp-hidden");
+        mediaContainer.querySelector(".htt-mvp-custom-pause").classList.remove("htt-mvp-hidden");                
         mediaContainer.querySelector(".play-icon").classList.add("htt-mvp-hidden");
     }
     
@@ -535,13 +535,13 @@
         var mediaContainer = container(e.target);
         var media = mediaContainer.querySelector(".htt-mvp");
         if (media.paused || media.ended) {
-            mediaContainer.querySelector(".custom-play").classList.add("htt-mvp-hidden");
-            mediaContainer.querySelector(".custom-pause").classList.remove("htt-mvp-hidden");
+            mediaContainer.querySelector(".htt-mvp-custom-play").classList.add("htt-mvp-hidden");
+            mediaContainer.querySelector(".htt-mvp-custom-pause").classList.remove("htt-mvp-hidden");
             media.play();
         }
         else {
-            mediaContainer.querySelector(".custom-play").classList.remove("htt-mvp-hidden");
-            mediaContainer.querySelector(".custom-pause").classList.add("htt-mvp-hidden");
+            mediaContainer.querySelector(".htt-mvp-custom-play").classList.remove("htt-mvp-hidden");
+            mediaContainer.querySelector(".htt-mvp-custom-pause").classList.add("htt-mvp-hidden");
             media.pause();
         }                
     }
@@ -581,8 +581,10 @@
     }
     function multimediaEndedHandler(e){
         var media = e.target;
-        container(media).querySelector(".custom-stop-button").classList.add("htt-mvp-hidden");
-        container(media).querySelector(".custom-playpause-button").classList.remove("htt-mvp-hidden");
+        container(media).querySelector(".htt-mvp-custom-stop").classList.add("htt-mvp-hidden");
+        container(media).querySelector(".htt-mvp-custom-pause").classList.add("htt-mvp-hidden");
+        container(media).querySelector(".htt-mvp-custom-play").classList.remove("htt-mvp-hidden");
+        container(media).querySelector(".htt-mvp-custom-playpause-button").classList.remove("htt-mvp-hidden");
     }
     function multimediaTimeupdateHandler(e){
         var mediaContainer = container(e.target);
